@@ -1,25 +1,22 @@
-# SkillMe
+# Skill Me
 
-**The MCP-native catalog of Claude Agent Skills. Install skills in chat. Never copy a folder.**
+**Agent skills for Claude, Codex, and Cursor.** A catalog of 2,500+ skills (SKILL.md instruction sets), a connector that lets your AI find and install them from chat, and a CLI that puts them on disk where your coding agent looks.
 
-Other skill directories show you a card and make you copy a folder from GitHub. SkillMe is different. It is delivered as an MCP server, so Claude browses the catalog, recommends the right skill for what you are doing, installs it, and applies it automatically the next session. You never leave the conversation.
+## Use it
 
-Every skill is free and clonable on GitHub. Every skill is reviewed for security before it enters the catalog. We sell convenience, never access.
+- **Connector (claude.ai, Claude Code, ChatGPT, Codex, Cursor, Antigravity):** add `https://skillme.dev/api/mcp` as a remote MCP server (streamable HTTP; sign in with OAuth or continue without an account). Setup per client: [skillme.dev/connect](https://skillme.dev/connect?utm_source=github&utm_medium=readme&utm_campaign=org-profile).
+- **Files for Codex, Cursor, or Claude Code:** `npx @skillme/cli add <slug> --target all` writes the skill to `.agents/skills`, `.cursor/skills`, and `.claude/skills`. No account needed.
+- **Browse:** [skillme.dev](https://skillme.dev/?utm_source=github&utm_medium=readme&utm_campaign=org-profile) · [connector docs](https://skillme.dev/docs?utm_source=github&utm_medium=readme&utm_campaign=org-profile)
 
-## How it works
+## On GitHub
 
-Connect the SkillMe MCP server, then ask Claude for help with a task. Claude recommends and installs the right skill in chat, and it applies automatically the next session.
+- [`skills`](https://github.com/SkillMedev/skills): every skill the Skill Me team writes, as MIT-licensed SKILL.md files.
+- One repo per first-party pack (e.g. [`engineering-workflow`](https://github.com/SkillMedev/engineering-workflow)), each with a one-line install.
 
-## Connect
+Skills published by other teams link to their original source from their skill page. A few first-party packs are available only through the connector.
 
-`https://skillshelf-ten.vercel.app/api/mcp`
-
-Transport is SSE. No auth to browse and get recommendations. Connect your account to install. The server exposes browse_skills and browse_packs to search the catalog, recommend_skills to find the right skill for a task, install_skill and install_pack to add them, get_active_skills to load what you installed, and manage_collection to build and share shelves.
-
-## Open source
-
-The catalog is open. Clone any skill from the repo. The skills are plain markdown and yours to keep.
+Submitted skills are reviewed before they're listed; [review criteria](https://skillme.dev/review-criteria) are public. Skills are plain-text instructions, not code: read one before you install it.
 
 ---
 
-SkillMe is independent and not affiliated with Anthropic. skillme.dev
+Skill Me is an independent project, not affiliated with or endorsed by Anthropic.
